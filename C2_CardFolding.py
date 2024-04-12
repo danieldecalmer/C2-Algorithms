@@ -9,10 +9,6 @@ def fold_punch_card(R, C, Y, punch_card):
     print("--------")
 
     if (C / Y != 2):
-            
-        
-
-            
             if (Y < (C / 2)):
                 for i in range(R):
                     #Splitting into two sides
@@ -27,9 +23,9 @@ def fold_punch_card(R, C, Y, punch_card):
                     print(left_side)
                     print(right_side_flipped)
                     print("iiiiiiiiii")
-                    folded_card[i] = right_side_flipped[num:] + folded_card[i]
+                    folded_card[i] = right_side_flipped[num-1:] + folded_card[i]
                     print("rtsdflipb4: ",right_side_flipped)
-                    right_side_flipped = right_side_flipped[num-1:]
+                    right_side_flipped = right_side_flipped[:-num]
                     print("rtsdflipafter: ",right_side_flipped)
                     print("folded_card: ",folded_card[i])
 
