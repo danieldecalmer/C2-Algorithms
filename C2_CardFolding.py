@@ -18,7 +18,7 @@ def fold_punch_card(R, C, Y, punch_card):
                     # Flipping the right side
                     right_side_flipped = temp[::-1]
                     # Use the right-side-flipped
-                    num = int(C/Y)
+                    num = int(C-2*Y)
                     print("iiiiiiiiii")
                     print(left_side)
                     print(right_side_flipped)
@@ -50,7 +50,7 @@ def fold_punch_card(R, C, Y, punch_card):
                     # Flipping the right side
                     right_side_flipped = temp[::-1]
                     # Use the left-side
-                    num = int(math.sqrt(Y))
+                    num = 2*Y
                     folded_card[i] = left_side[:num] + folded_card[i]
                     left_side = left_side[num:]
                     print("mmmmmmmmmm")
